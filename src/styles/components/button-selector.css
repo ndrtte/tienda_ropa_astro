@@ -1,0 +1,51 @@
+.swatch-button.is-selected,
+.size-option.is-selected {
+	background: var(--accent);
+	border-color: var(--accent);
+	color: #fff;
+	transform: translateY(-1px);
+}
+
+.swatches,
+.sizes {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.swatch-button,
+.size-option {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 40px;
+	padding: 0 14px;
+	border-radius: 999px;
+	border: 1px solid var(--line);
+	background: #fff;
+	color: var(--text);
+}
+
+.size-option,
+.swatch-button {
+	cursor: pointer;
+	transition:
+		background-color 180ms ease,
+		border-color 180ms ease,
+		transform 180ms ease;
+}
+
+.size-option:hover,
+.swatch-button:hover {
+	transform: translateY(-1px);
+}
+
+
+.label {
+	font-size: 0.78rem;
+	font-weight: 700;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--muted);
+}
+

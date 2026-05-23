@@ -1,0 +1,247 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+	title="Tienda Ropa | Shopping cart"
+	description="Review selected fashion items, adjust quantities, and preview the checkout summary."
+>
+	<section class="section">
+		<div class="container cart-layout" data-cart-root>
+			<div class="stack">
+				<p class="kicker">Cart</p>
+				<div class="cart-heading">
+					<h1 class="h2">Your shopping bag.</h1>
+					<p class="lead">
+						Review selected items, adjust quantities, and continue when your look is ready.
+					</p>
+				</div>
+
+				<div class="cart-empty surface" data-cart-empty>
+					<h2 class="h3">Your cart is empty.</h2>
+					<p class="muted">Browse the catalog and add your favourite pieces to continue.</p>
+					<a class="button" href="/productos">Shop collection</a>
+				</div>
+
+				<div class="cart-items stack" data-cart-items></div>
+			</div>
+
+			<aside class="summary surface">
+				<p class="kicker">Summary</p>
+				<h2 class="h3">Order total</h2>
+
+				<div class="summary-list">
+					<div>
+						<span>Items</span>
+						<span data-cart-count-label>0 items</span>
+					</div>
+					<div>
+						<span>Subtotal</span>
+						<span data-cart-subtotal>€0</span>
+					</div>
+					<div>
+						<span>Shipping</span>
+						<span data-cart-shipping>Free</span>
+					</div>
+					<div class="total-row">
+						<span>Total</span>
+						<span data-cart-total>€0</span>
+					</div>
+				</div>
+
+				<div class="summary-notes">
+					<p class="muted">
+						Review your bag, adjust quantities, and clear the cart whenever you want to start over.
+					</p>
+				</div>
+
+				<button class="button" type="button" data-clear-cart>Clear cart</button>
+				<a class="button-secondary checkout-button" href="/productos">Continue shopping</a>
+			</aside>
+		</div>
+	</section>
+
+	<script>
+		import { initCartPage } from '../scripts/cart-page';
+		initCartPage();
+	</script>
+</Layout>
+
+<style>
+	.cart-layout {
+		display: grid;
+		grid-template-columns: minmax(0, 1.4fr) minmax(320px, 0.6fr);
+		gap: 28px;
+		align-items: start;
+	}
+
+	.cart-heading {
+		display: grid;
+		gap: 14px;
+		max-width: 760px;
+	}
+
+	.cart-empty {
+		display: grid;
+		gap: 12px;
+		padding: 24px;
+	}
+
+	.cart-items {
+		padding-top: 8px;
+	}
+
+	.cart-item {
+		display: grid;
+		grid-template-columns: 140px minmax(0, 1fr);
+		gap: 18px;
+		padding: 16px;
+	}
+
+	.cart-image {
+		width: 100%;
+		height: 100%;
+		min-height: 170px;
+		object-fit: cover;
+		border-radius: calc(var(--radius) - 10px);
+		background: #e9e2d8;
+	}
+
+	.cart-details {
+		display: grid;
+		gap: 18px;
+		align-content: space-between;
+	}
+
+	.cart-meta {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		gap: 18px;
+	}
+
+	.category {
+		margin: 0 0 6px;
+		font-size: 0.78rem;
+		font-weight: 700;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+		color: var(--muted);
+	}
+
+	.item-name {
+		margin: 0;
+		font-size: 1.08rem;
+		line-height: 1.25;
+	}
+
+	.item-price {
+		display: grid;
+		justify-items: end;
+		gap: 4px;
+		font-weight: 700;
+	}
+
+	.item-price small {
+		color: var(--muted);
+		text-decoration: line-through;
+		font-weight: 500;
+	}
+
+	.cart-actions {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		gap: 12px;
+	}
+
+	.quantity-control {
+		display: inline-flex;
+		align-items: center;
+		gap: 14px;
+		padding: 8px;
+		border: 1px solid var(--line);
+		border-radius: 999px;
+		background: rgba(255, 255, 255, 0.7);
+	}
+
+	.quantity-control button,
+	.remove-button {
+		border: 0;
+		background: transparent;
+		color: var(--text);
+		cursor: pointer;
+	}
+
+	.quantity-control button {
+		width: 32px;
+		height: 32px;
+		border-radius: 999px;
+		background: #fff;
+		border: 1px solid var(--line);
+	}
+
+	.remove-button {
+		color: var(--muted);
+		font-size: 0.95rem;
+	}
+
+	.summary {
+		position: sticky;
+		top: 108px;
+		padding: 22px;
+		display: grid;
+		gap: 18px;
+	}
+
+	.summary-list {
+		display: grid;
+		gap: 12px;
+	}
+
+	.summary-list div {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 16px;
+	}
+
+	.total-row {
+		padding-top: 12px;
+		border-top: 1px solid var(--line);
+		font-weight: 700;
+	}
+
+	.checkout-button {
+		width: 100%;
+	}
+
+	@media (max-width: 900px) {
+		.cart-layout {
+			grid-template-columns: 1fr;
+		}
+
+		.summary {
+			position: static;
+		}
+	}
+
+	@media (max-width: 640px) {
+		.cart-item {
+			grid-template-columns: 1fr;
+		}
+
+		.cart-image {
+			min-height: 240px;
+		}
+
+		.cart-meta {
+			flex-direction: column;
+		}
+
+		.item-price {
+			justify-items: start;
+		}
+	}
+</style>

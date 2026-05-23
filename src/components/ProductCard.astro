@@ -1,0 +1,138 @@
+---
+import type { Product } from '../data/products';
+
+type Props = {
+	product: Product;
+};
+
+const { product } = Astro.props as Props;
+const displayPrice = product.discountPrice ?? product.price;
+const hasDiscount = Boolean(product.discountPrice);
+---
+
+<article class="surface card-hover product-card">
+	<a href={`/productos/${product.id}`} class="product-link">
+		<div class="image-wrap">
+			<img src={product.images[0]} alt={product.name} loading="lazy" />
+			{hasDiscount && <span class="badge">-{Math.round(((product.price - displayPrice) / product.price) * 100)}%</span>}
+		</div>
+
+		<div class="content">
+			<div class="meta">
+				<p class="category">{product.category}</p>
+				<h3 class="title">{product.name}</h3>
+			</div>
+
+			<div class="price-row">
+				<div class="prices">
+					<span class="price">€{displayPrice}</span>
+					{hasDiscount && <span class="old-price">€{product.price}</span>}
+				</div>
+				<span class="details">View details</span>
+			</div>
+		</div>
+	</a>
+</article>
+
+<style>
+	.product-card {
+		overflow: hidden;
+		background: #fff;
+	}
+
+	.product-link {
+		display: grid;
+		height: 100%;
+	}
+
+	.image-wrap {
+		position: relative;
+		aspect-ratio: 4 / 5;
+		overflow: hidden;
+		background: #eee7de;
+	}
+
+	.image-wrap img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 260ms ease;
+	}
+
+	.product-link:hover .image-wrap img {
+		transform: scale(1.03);
+	}
+
+	.badge {
+		position: absolute;
+		top: 14px;
+		left: 14px;
+		padding: 7px 10px;
+		border-radius: 999px;
+		background: #111;
+		color: #fff;
+		font-size: 0.78rem;
+		font-weight: 700;
+	}
+
+	.content {
+		display: grid;
+		gap: 18px;
+		padding: 18px;
+	}
+
+	.meta {
+		display: grid;
+		gap: 4px;
+	}
+
+	.category {
+		margin: 0;
+		font-size: 0.8rem;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		color: var(--muted);
+	}
+
+	.title {
+		margin: 0;
+		font-size: 1.05rem;
+		font-weight: 600;
+		line-height: 1.25;
+	}
+
+	.price-row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 12px;
+	}
+
+	.prices {
+		display: flex;
+		align-items: baseline;
+		gap: 10px;
+	}
+
+	.price {
+		font-size: 1rem;
+		font-weight: 700;
+	}
+
+	.old-price {
+		color: var(--muted);
+		text-decoration: line-through;
+		font-size: 0.95rem;
+	}
+
+	.details {
+		color: var(--muted);
+		font-size: 0.92rem;
+	}
+
+	@media (max-width: 640px) {
+		.content {
+			padding: 16px;
+		}
+	}
+</style>

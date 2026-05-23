@@ -1,0 +1,209 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { categoryCards, featuredProducts } from '../data/products';
+import ProductCard from '../components/ProductCard.astro';
+---
+
+<Layout
+	title="Tienda Ropa | Modern fashion essentials"
+	description="Elegant clothing store homepage with curated collections, featured categories, and trending products."
+>
+	<section class="hero section">
+		<div class="container hero-grid">
+			<div class="hero-copy stack">
+				<p class="kicker">New season collection</p>
+				<h1 class="h1">Refined essentials for a modern wardrobe.</h1>
+				<p class="lead">
+					Curated clothing and accessories with a clean, minimal aesthetic inspired by
+					contemporary fashion brands.
+				</p>
+
+				<div class="hero-actions">
+					<a class="button" href="/productos">Shop collection</a>
+					<a class="button-secondary" href="/productos/linen-overshirt">View featured piece</a>
+				</div>
+
+				<div class="hero-pills">
+					<span class="pill">Free shipping over €100</span>
+					<span class="pill">New arrivals weekly</span>
+				</div>
+			</div>
+
+			<div class="hero-visual surface">
+				<img
+					src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1400&q=80"
+					alt="Model wearing a neutral fashion outfit"
+				/>
+			</div>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="container welcome surface-soft">
+			<div class="welcome-inner">
+				<div class="stack">
+					<p class="kicker">Welcome</p>
+					<h2 class="h2">A polished shopping experience with a calm, editorial feel.</h2>
+				</div>
+				<p class="lead">
+					Browse modern silhouettes, timeless tailoring, and versatile accessories designed
+					to feel elevated without losing everyday wearability.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="container stack">
+			<div class="section-heading">
+				<div>
+					<p class="kicker">Categories</p>
+					<h2 class="h2">Featured categories</h2>
+				</div>
+				<a class="link-arrow" href="/productos">
+					View all
+					<span aria-hidden="true">→</span>
+				</a>
+			</div>
+
+			<div class="grid grid-3">
+				{categoryCards.map((category) => (
+					<a href={category.href} class="category-card surface card-hover">
+						<div class="category-image">
+							<img src={category.image} alt={category.title} />
+						</div>
+						<div class="category-content">
+							<p class="category-title">{category.title}</p>
+							<p class="muted">{category.description}</p>
+						</div>
+					</a>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="container stack">
+			<div class="section-heading">
+				<div>
+					<p class="kicker">Trending now</p>
+					<h2 class="h2">Featured products</h2>
+				</div>
+				<a class="link-arrow" href="/productos">
+					Explore catalog
+					<span aria-hidden="true">→</span>
+				</a>
+			</div>
+
+			<div class="grid grid-4">
+				{featuredProducts.map((product) => <ProductCard product={product} />)}
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.hero-grid {
+		display: grid;
+		grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+		gap: 32px;
+		align-items: center;
+	}
+
+	.hero-copy {
+		padding-right: 24px;
+	}
+
+	.hero-actions,
+	.hero-pills {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 12px;
+	}
+
+	.hero-visual {
+		padding: 18px;
+	}
+
+	.hero-visual img {
+		width: 100%;
+		aspect-ratio: 5 / 6;
+		object-fit: cover;
+		border-radius: calc(var(--radius) - 10px);
+	}
+
+	.welcome {
+		padding: 34px;
+	}
+
+	.welcome-inner {
+		display: grid;
+		grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+		gap: 28px;
+		align-items: center;
+	}
+
+	.section-heading {
+		display: flex;
+		align-items: end;
+		justify-content: space-between;
+		gap: 18px;
+	}
+
+	.category-card {
+		display: grid;
+		overflow: hidden;
+		background: #fff;
+	}
+
+	.category-image {
+		aspect-ratio: 4 / 5;
+		overflow: hidden;
+		background: #e9e2d8;
+	}
+
+	.category-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 260ms ease;
+	}
+
+	.category-card:hover .category-image img {
+		transform: scale(1.03);
+	}
+
+	.category-content {
+		display: grid;
+		gap: 10px;
+		padding: 18px;
+	}
+
+	.category-title {
+		margin: 0;
+		font-size: 1.15rem;
+		font-weight: 600;
+	}
+
+	@media (max-width: 900px) {
+		.hero-grid,
+		.welcome-inner {
+			grid-template-columns: 1fr;
+		}
+
+		.hero-copy {
+			padding-right: 0;
+		}
+	}
+
+	@media (max-width: 640px) {
+		.section-heading {
+			align-items: flex-start;
+			flex-direction: column;
+		}
+
+		.welcome {
+			padding: 22px;
+		}
+	}
+</style>

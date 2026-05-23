@@ -1,0 +1,231 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import { getCategorySlug, products } from '../../data/products';
+
+const url = Astro.url;
+const categoryFilter = url.searchParams.get('categoria') ?? '';
+const searchQuery = url.searchParams.get('q')?.trim() ?? '';
+const sortValue = url.searchParams.get('sort') ?? 'featured';
+
+const categoryOptions = [
+	{ label: 'All', slug: '' },
+	{ label: 'Men', slug: 'men' },
+	{ label: 'Women', slug: 'women' },
+	{ label: 'Accessories', slug: 'accessories' }
+];
+
+function buildHref(updates: Record<string, string | null | undefined>) {
+	const params = new URLSearchParams(url.searchParams);
+
+	for (const [key, value] of Object.entries(updates)) {
+		if (!value) {
+			params.delete(key);
+			continue;
+		}
+
+		params.set(key, value);
+	}
+
+	const query = params.toString();
+	return query ? `${url.pathname}?${query}` : url.pathname;
+}
+
+const filteredProducts = products.filter((product) => {
+	const matchesCategory = !categoryFilter || getCategorySlug(product.category) === categoryFilter;
+	const normalizedQuery = searchQuery.toLowerCase();
+
+	const matchesSearch =
+		!normalizedQuery ||
+		product.name.toLowerCase().includes(normalizedQuery) ||
+		product.description.toLowerCase().includes(normalizedQuery) ||
+		product.category.toLowerCase().includes(normalizedQuery);
+
+	return matchesCategory && matchesSearch;
+});
+
+const sortedProducts = [...filteredProducts].sort((left, right) => {
+	const leftPrice = left.discountPrice ?? left.price;
+	const rightPrice = right.discountPrice ?? right.price;
+
+	if (sortValue === 'price-asc') {
+		return leftPrice - rightPrice;
+	}
+
+	if (sortValue === 'price-desc') {
+		return rightPrice - leftPrice;
+	}
+
+	return Number(Boolean(right.featured)) - Number(Boolean(left.featured));
+});
+
+const hasResults = sortedProducts.length > 0;
+---
+
+<Layout
+	title="Tienda Ropa | Product catalog"
+	description="Browse the full clothing catalog with modern fashion essentials and curated accessories."
+>
+	<section class="section">
+		<div class="container catalog-hero stack">
+			<p class="kicker">Catalog</p>
+			<div class="catalog-heading">
+				<h1 class="h2">Discover the full collection.</h1>
+				<p class="lead">
+					Minimal silhouettes, essential layers, and refined accessories for a modern wardrobe.
+				</p>
+			</div>
+
+			<form class="catalog-toolbar surface-soft" method="get">
+				<label class="search-field">
+					<span class="toolbar-label">Search</span>
+					<input
+						class="field"
+						type="search"
+						name="q"
+						value={searchQuery}
+						placeholder="Search products"
+					/>
+				</label>
+
+				<label class="search-field">
+					<span class="toolbar-label">Sort by</span>
+					<select class="select" name="sort">
+						<option value="featured" selected={sortValue === 'featured'}>Featured</option>
+						<option value="price-asc" selected={sortValue === 'price-asc'}>Price: low to high</option>
+						<option value="price-desc" selected={sortValue === 'price-desc'}>Price: high to low</option>
+					</select>
+				</label>
+
+				<input type="hidden" name="categoria" value={categoryFilter} />
+				<button class="button" type="submit">Apply</button>
+				<a class="button-secondary" href="/productos">Reset</a>
+			</form>
+
+			<div class="catalog-filters" aria-label="Product categories">
+				{categoryOptions.map((category) => (
+					<a
+						class:list={[
+							'pill',
+							category.slug === categoryFilter && 'pill-active',
+							!category.slug && !categoryFilter && 'pill-active'
+						]}
+						href={category.slug ? buildHref({ categoria: category.slug }) : '/productos'}
+					>
+						{category.label}
+					</a>
+				))}
+			</div>
+
+			<div class="catalog-meta">
+				<p class="muted">
+					{hasResults
+						? `${sortedProducts.length} product${sortedProducts.length === 1 ? '' : 's'} available`
+						: 'No products match your current filters.'}
+				</p>
+				{(categoryFilter || searchQuery || sortValue !== 'featured') && (
+					<a class="link-arrow" href="/productos">
+						Clear filters
+						<span aria-hidden="true">→</span>
+					</a>
+				)}
+			</div>
+		</div>
+	</section>
+
+	<section class="section-tight">
+		<div class="container">
+			{hasResults ? (
+				<div class="grid grid-4">
+					{sortedProducts.map((product) => <ProductCard product={product} />)}
+				</div>
+			) : (
+				<div class="surface catalog-empty">
+					<h2 class="h3">Nothing matched your filters.</h2>
+					<p class="muted">
+						Try a different keyword or category to keep browsing the collection.
+					</p>
+					<a class="button" href="/productos">View all products</a>
+				</div>
+			)}
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.catalog-hero {
+		gap: 18px;
+	}
+
+	.catalog-heading {
+		display: grid;
+		gap: 16px;
+		max-width: 820px;
+	}
+
+	.catalog-toolbar {
+		display: grid;
+		grid-template-columns: minmax(0, 1.3fr) minmax(180px, 0.6fr) auto auto;
+		gap: 14px;
+		align-items: end;
+		padding: 18px;
+	}
+
+	.search-field {
+		display: grid;
+		gap: 8px;
+	}
+
+	.toolbar-label {
+		font-size: 0.78rem;
+		font-weight: 700;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+		color: var(--muted);
+	}
+
+	.catalog-filters {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		padding-top: 10px;
+	}
+
+	.pill-active {
+		background: var(--accent);
+		border-color: var(--accent);
+		color: #fff;
+	}
+
+	.catalog-meta {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		gap: 12px;
+	}
+
+	.catalog-empty {
+		display: grid;
+		gap: 14px;
+		justify-items: start;
+		padding: 28px;
+	}
+
+	@media (max-width: 900px) {
+		.catalog-toolbar {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	@media (max-width: 640px) {
+		.catalog-toolbar {
+			grid-template-columns: 1fr;
+		}
+
+		.catalog-meta {
+			align-items: flex-start;
+			flex-direction: column;
+		}
+	}
+</style>

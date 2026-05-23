@@ -1,0 +1,62 @@
+<footer class="site-footer">
+	<div class="container footer-inner">
+		<div class="footer-brand">
+			<p class="kicker">Tienda Ropa</p>
+			<p class="footer-copy">
+				Minimal fashion essentials with a polished shopping experience.
+			</p>
+		</div>
+
+		<div class="footer-links" aria-label="Footer">
+			<a href="/productos">Catalog</a>
+			<a href="/productos/linen-overshirt">Featured item</a>
+			<a href="/carrito">Cart</a>
+		</div>
+	</div>
+</footer>
+
+<style>
+	.site-footer {
+		padding: 36px 0 56px;
+		border-top: 1px solid rgba(17, 17, 17, 0.08);
+		background: rgba(246, 243, 238, 0.72);
+	}
+
+	.footer-inner {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		gap: 24px;
+	}
+
+	.footer-copy {
+		max-width: 34ch;
+		margin: 10px 0 0;
+		color: var(--muted);
+	}
+
+	.footer-links {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		gap: 12px 18px;
+	}
+
+	.footer-links a {
+		color: var(--muted);
+	}
+
+	.footer-links a:hover {
+		color: var(--text);
+	}
+
+	@media (max-width: 640px) {
+		.footer-inner {
+			flex-direction: column;
+		}
+
+		.footer-links {
+			justify-content: flex-start;
+		}
+	}
+</style>
