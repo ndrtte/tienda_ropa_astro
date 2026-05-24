@@ -76,7 +76,7 @@ export default function ProductActions({ product }) {
 
       {/* CARRITO */}
       <div className="action-row">
-        <button className="button" type="button" 
+        <button className="button add-to-cart" type="button" 
           onClick={() => {
             handleAddToCart();}
           }  data-add-to-cart>Agregar al carrito</button>

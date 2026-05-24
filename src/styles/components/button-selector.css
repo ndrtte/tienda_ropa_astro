@@ -49,3 +49,7 @@
 	color: var(--muted);
 }
 
+.add-to-cart {
+  cursor: pointer;
+  margin-right: 10px;
+}
