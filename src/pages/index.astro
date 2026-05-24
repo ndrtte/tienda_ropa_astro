@@ -101,15 +101,38 @@ import ProductCard from '../components/ProductCard.astro';
 </Layout>
 
 <style>
+	.hero {
+		position: relative;
+		overflow: hidden;
+	}
+
+	.hero::before {
+		content: '';
+		position: absolute;
+		inset: 16px auto auto 50%;
+		width: min(62vw, 820px);
+		height: min(62vw, 820px);
+		transform: translateX(-50%);
+		border-radius: 50%;
+		background: radial-gradient(circle, rgba(255, 255, 255, 0.42), transparent 68%);
+		filter: blur(10px);
+		pointer-events: none;
+	}
+
 	.hero-grid {
+		position: relative;
 		display: grid;
-		grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-		gap: 32px;
+		grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+		gap: 36px;
 		align-items: center;
 	}
 
 	.hero-copy {
-		padding-right: 24px;
+		padding: 12px 24px 12px 0;
+	}
+
+	.hero-copy .lead {
+		font-size: clamp(1.04rem, 1.25vw, 1.15rem);
 	}
 
 	.hero-actions,
@@ -120,14 +143,16 @@ import ProductCard from '../components/ProductCard.astro';
 	}
 
 	.hero-visual {
-		padding: 18px;
+		padding: 16px;
+		transform: rotate(1deg);
+		box-shadow: 0 30px 70px rgba(16, 16, 16, 0.12);
 	}
 
 	.hero-visual img {
 		width: 100%;
 		aspect-ratio: 5 / 6;
 		object-fit: cover;
-		border-radius: calc(var(--radius) - 10px);
+		border-radius: calc(var(--radius) - 12px);
 	}
 
 	.welcome {
@@ -136,7 +161,7 @@ import ProductCard from '../components/ProductCard.astro';
 
 	.welcome-inner {
 		display: grid;
-		grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+		grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
 		gap: 28px;
 		align-items: center;
 	}
@@ -151,24 +176,37 @@ import ProductCard from '../components/ProductCard.astro';
 	.category-card {
 		display: grid;
 		overflow: hidden;
-		background: #fff;
+		background: rgba(255, 253, 249, 0.92);
+		border: 1px solid rgba(16, 16, 16, 0.08);
 	}
 
 	.category-image {
+		position: relative;
 		aspect-ratio: 4 / 5;
 		overflow: hidden;
-		background: #e9e2d8;
+		background:
+			radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.55), transparent 28%),
+			#e9dfd2;
+	}
+
+	.category-image::after {
+		content: '';
+		position: absolute;
+		inset: auto 0 0;
+		height: 30%;
+		background: linear-gradient(180deg, transparent, rgba(16, 16, 16, 0.08));
+		pointer-events: none;
 	}
 
 	.category-image img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		transition: transform 260ms ease;
+		transition: transform 320ms ease;
 	}
 
 	.category-card:hover .category-image img {
-		transform: scale(1.03);
+		transform: scale(1.05);
 	}
 
 	.category-content {
@@ -179,8 +217,13 @@ import ProductCard from '../components/ProductCard.astro';
 
 	.category-title {
 		margin: 0;
-		font-size: 1.15rem;
-		font-weight: 600;
+		font-size: 1.08rem;
+		font-weight: 700;
+		letter-spacing: -0.02em;
+	}
+
+	.category-content .muted {
+		line-height: 1.55;
 	}
 
 	@media (max-width: 900px) {
@@ -191,6 +234,10 @@ import ProductCard from '../components/ProductCard.astro';
 
 		.hero-copy {
 			padding-right: 0;
+		}
+
+		.hero-visual {
+			transform: none;
 		}
 	}
 

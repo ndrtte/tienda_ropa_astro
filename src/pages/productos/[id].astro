@@ -79,7 +79,7 @@ const defaultQuantity = 1;
 <style>
 	.detail-layout {
 		display: grid;
-		grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+		grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
 		gap: 32px;
 		align-items: start;
 	}
@@ -92,8 +92,10 @@ const defaultQuantity = 1;
 
 	.gallery-main {
 		overflow: hidden;
-		border-radius: calc(var(--radius) - 10px);
-		background: #e9e2d8;
+		border-radius: calc(var(--radius) - 6px);
+		background:
+			radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.55), transparent 28%),
+			#e9dfd2;
 	}
 
 	.gallery-main img {
@@ -111,7 +113,9 @@ const defaultQuantity = 1;
 	.thumb {
 		overflow: hidden;
 		border-radius: 16px;
-		background: #e9e2d8;
+		background:
+			radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.55), transparent 28%),
+			#e9dfd2;
 	}
 
 	.thumb img {
@@ -133,12 +137,13 @@ const defaultQuantity = 1;
 		display: flex;
 		align-items: baseline;
 		gap: 12px;
+		flex-wrap: wrap;
 	}
 
 	.price {
-		font-size: 1.9rem;
-		font-weight: 700;
-		letter-spacing: -0.04em;
+		font-size: 2rem;
+		font-weight: 800;
+		letter-spacing: -0.05em;
 	}
 
 	.old-price {
@@ -198,7 +203,7 @@ const defaultQuantity = 1;
 		}
 
 		.price {
-			font-size: 1.6rem;
+			font-size: 1.65rem;
 		}
 	}
 </style>

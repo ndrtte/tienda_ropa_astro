@@ -40,7 +40,7 @@ function renderCartItem(item: CartItem) {
 					<div>
 						<p class="category">${item.category}</p>
 						<h2 class="item-name">${item.name}</h2>
-						<p class="muted">Size ${item.size}${colorLabel}</p>
+						<p class="muted">Talla ${item.size}${colorLabel}</p>
 					</div>
 					<div class="item-price">
 						<span>${formatCurrency(price)}</span>
@@ -55,7 +55,7 @@ function renderCartItem(item: CartItem) {
 						<button type="button" data-quantity-action="increase" aria-label="Increase quantity">+</button>
 					</div>
 
-					<button type="button" class="remove-button" data-remove-item>Remove item</button>
+					<button type="button" class="remove-button" data-remove-item>Eliminar artículo</button>
 				</div>
 			</div>
 		</article>
