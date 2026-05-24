@@ -1,0 +1,277 @@
+.product-catalog {
+	display: contents;
+}
+
+.catalog-hero {
+	gap: 22px;
+}
+
+.catalog-heading {
+	display: grid;
+	gap: 14px;
+	max-width: 820px;
+}
+
+.catalog-toolbar {
+	display: grid;
+	grid-template-columns: minmax(0, 1.35fr) minmax(200px, 0.7fr) auto;
+	gap: 14px;
+	align-items: end;
+	padding: 20px;
+	border-radius: calc(var(--radius) - 2px);
+}
+
+.search-field {
+	display: grid;
+	gap: 8px;
+}
+
+.input-icon-wrap {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.input-icon-wrap i {
+	position: absolute;
+	left: 14px;
+	z-index: 1;
+	color: var(--muted);
+	font-size: 1rem;
+	pointer-events: none;
+}
+
+.field-with-icon,
+.select-with-icon {
+	padding-left: 42px;
+}
+
+.toolbar-label {
+	font-size: 0.72rem;
+	font-weight: 800;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: var(--muted);
+}
+
+.toolbar-reset {
+	min-width: 130px;
+}
+
+.toolbar-reset i {
+	font-size: 1rem;
+}
+
+.catalog-filters {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	padding-top: 6px;
+}
+
+.pill {
+	border: 1px solid rgba(16, 16, 16, 0.1);
+	cursor: pointer;
+}
+
+.pill-active {
+	background: var(--accent);
+	border-color: var(--accent);
+	color: #fff;
+	box-shadow: 0 14px 30px rgba(16, 16, 16, 0.16);
+}
+
+.pill-action {
+	gap: 10px;
+	font-weight: 700;
+}
+
+.pill-action i {
+	font-size: 0.95rem;
+}
+
+.catalog-meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+}
+
+.link-button {
+	padding: 0;
+	border: 0;
+	background: transparent;
+	color: var(--text);
+	cursor: pointer;
+	font: inherit;
+}
+
+.link-button i {
+	font-size: 0.95rem;
+}
+
+.catalog-empty {
+	display: grid;
+	gap: 14px;
+	justify-items: start;
+	padding: 30px;
+}
+
+.empty-icon {
+	display: grid;
+	place-items: center;
+	width: 64px;
+	height: 64px;
+	border-radius: 20px;
+	background: var(--surface-soft);
+	color: var(--accent);
+	font-size: 1.5rem;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55);
+}
+
+.product-card {
+	overflow: hidden;
+}
+
+.product-link {
+	display: grid;
+	height: 100%;
+}
+
+.image-wrap {
+	position: relative;
+	aspect-ratio: 4 / 5;
+	overflow: hidden;
+	background:
+		radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.55), transparent 28%),
+		#e9dfd2;
+}
+
+.image-wrap::after {
+	content: '';
+	position: absolute;
+	inset: auto 0 0;
+	height: 32%;
+	background: linear-gradient(180deg, transparent, rgba(16, 16, 16, 0.08));
+	pointer-events: none;
+}
+
+.image-wrap img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 320ms ease;
+}
+
+.product-link:hover .image-wrap img {
+	transform: scale(1.05);
+}
+
+.badge {
+	position: absolute;
+	top: 14px;
+	left: 14px;
+	z-index: 1;
+	padding: 7px 10px;
+	border-radius: 999px;
+	background: rgba(16, 16, 16, 0.92);
+	color: #fff;
+	font-size: 0.74rem;
+	font-weight: 800;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	box-shadow: 0 12px 24px rgba(16, 16, 16, 0.18);
+}
+
+.content {
+	display: grid;
+	gap: 16px;
+	padding: 18px 18px 20px;
+}
+
+.meta {
+	display: grid;
+	gap: 5px;
+}
+
+.category {
+	margin: 0;
+	font-size: 0.72rem;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--muted);
+}
+
+.title {
+	margin: 0;
+	font-size: 1.02rem;
+	font-weight: 700;
+	line-height: 1.2;
+	letter-spacing: -0.03em;
+}
+
+.price-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	padding-top: 2px;
+}
+
+.prices {
+	display: flex;
+	align-items: baseline;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+.price {
+	font-size: 1rem;
+	font-weight: 800;
+	letter-spacing: -0.02em;
+}
+
+.old-price {
+	color: var(--muted);
+	text-decoration: line-through;
+	font-size: 0.92rem;
+}
+
+.details {
+	color: var(--muted);
+	font-size: 0.82rem;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+	.catalog-toolbar {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (max-width: 640px) {
+	.catalog-toolbar {
+		grid-template-columns: 1fr;
+	}
+
+	.catalog-meta {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	.toolbar-reset {
+		width: 100%;
+	}
+
+	.content {
+		padding: 16px;
+	}
+
+	.price-row {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+}
