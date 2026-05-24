@@ -5,7 +5,7 @@ export default function ColorSelector({ colors }) {
 
   return (
     <div className="detail-row">
-      <span className="label">Available colors</span>
+      <span className="label">Colores Disponibles</span>
 
       <div className="swatches" aria-label="Available colors">
         {colors.map((color) => (

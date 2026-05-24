@@ -11,7 +11,7 @@ export default function QuantityPicker({ initial = 1 }) {
 
   return (
     <div className="detail-row">
-      <span className="label">Quantity</span>
+      <span className="label">Cantidad</span>
 
       <div className="quantity-picker" aria-label="Quantity selector">
         <button type="button" onClick={decrease} aria-label="Decrease quantity">

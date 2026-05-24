@@ -5,7 +5,7 @@ export default function SizeSelector({ sizes }) {
 
     return (
         <div className="detail-row">
-            <span className="label">Size</span>
+            <span className="label">Talla</span>
 
             <div className="sizes" aria-label="Available sizes">
                 {sizes.map((size) => (
