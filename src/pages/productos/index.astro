@@ -123,12 +123,12 @@ const hasResults = sortedProducts.length > 0;
 			<div class="catalog-meta">
 				<p class="muted">
 					{hasResults
-						? `${sortedProducts.length} productos${sortedProducts.length === 1 ? '' : 's'} disponibles.`
-						: 'No products match your current filters.'}
+						? `${sortedProducts.length} producto${sortedProducts.length === 1 ? '' : 's'} disponibles.`
+						: 'No hay productos que coincidan con sus filtros actuales.'}
 				</p>
 				{(categoryFilter || searchQuery || sortValue !== 'featured') && (
 					<a class="link-arrow" href="/productos">
-						Clear filters
+						Limpiar filtros
 						<span aria-hidden="true">→</span>
 					</a>
 				)}
