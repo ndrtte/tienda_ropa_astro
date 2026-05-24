@@ -181,11 +181,16 @@ export function initCartPage() {
 		return;
 	}
 
-	syncCart();
-	wireCartInteractions();
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', () => {
+			syncCart();
+			wireCartInteractions();
+		});
+	} else {
+		syncCart();
+		wireCartInteractions();
+	}
 
 	window.addEventListener('cart:updated', syncCart);
 	window.addEventListener('storage', syncCart);
 }
-
-initCartPage();

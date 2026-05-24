@@ -31,7 +31,7 @@ export type CartInput = {
 const isBrowser = typeof window !== 'undefined';
 
 export function getCartKey(productId: string, size: string, color = '') {
-	return `${productId}::${size}::${color.toLowerCase()}`;
+	return `${productId}::${size}::${color.trim().toLowerCase()}`;
 }
 
 export function getCartCount(items: CartItem[]) {

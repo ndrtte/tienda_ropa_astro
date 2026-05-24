@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import {
   addToCart,
   removeCartItem,
   updateItemQuantity,
-  saveCart
+  saveCart,
+  loadCart,
 } from "../utils/cart";
 
 import type { CartItem, CartInput } from "../utils/cart";
@@ -12,36 +13,40 @@ export function useCart() {
   const [cart, setCart] = useState<CartItem[]>([]);
 
   useEffect(() => {
-    const stored = localStorage.getItem("cart");
-    if (stored) setCart(JSON.parse(stored));
+    setCart(loadCart());
   }, []);
 
-  const persist = (next: CartItem[]) => {
+  const persist = useCallback((next: CartItem[]) => {
     setCart(next);
     saveCart(next);
-  };
+  }, []);
 
-  const add = (input: CartInput) => {
-    persist(addToCart(cart, input));
-  };
+  const add = useCallback((input: CartInput) => {
+    setCart((current) => {
+      const next = addToCart(current, input);
+      saveCart(next);
+      return next;
+    });
+  }, []);
 
-  const remove = (productId: string, size: string, color: string = "") => {
-    persist(removeCartItem(cart, productId, size, color));
-  };
+  const remove = useCallback((productId: string, size: string, color = "") => {
+    setCart((current) => {
+      const next = removeCartItem(current, productId, size, color);
+      saveCart(next);
+      return next;
+    });
+  }, []);
 
-  const updateQty = (
-    productId: string,
-    size: string,
-    quantity: number,
-    color: string = ""
-  ) => {
-    persist(updateItemQuantity(cart, productId, size, quantity, color));
-  };
+  const updateQty = useCallback(
+    (productId: string, size: string, quantity: number, color = "") => {
+      setCart((current) => {
+        const next = updateItemQuantity(current, productId, size, quantity, color);
+        saveCart(next);
+        return next;
+      });
+    },
+    []
+  );
 
-  return {
-    cart,
-    add,
-    remove,
-    updateQty
-  };
+  return { cart, add, remove, updateQty };
 }

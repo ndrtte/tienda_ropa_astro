@@ -241,6 +241,10 @@ main {
 	gap: 10px;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 @media (max-width: 900px) {
 
 	.grid-4,
