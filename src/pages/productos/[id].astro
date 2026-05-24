@@ -1,9 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { products } from '../../data/products';
-import ColorSelector from '../../components/ColorSelector.jsx';
-import SizeSelector from '../../components/SizeSelector.jsx';
-import QuantityPicker from '../../components/QuantityPicker.jsx';
+import ProductAction from '../../components/ProductAction.jsx';
 import "../../styles/components/button-selector.css";
 import "../../styles/components/quantity-picker.css";
 
@@ -60,16 +58,9 @@ const defaultQuantity = 1;
 						<span>{product.material}</span>
 					</div>
 
-					<ColorSelector client:load colors={availableColors} />
-					<SizeSelector client:load sizes={product.sizes} />
-					<QuantityPicker client:load initial={defaultQuantity} />
+					<ProductAction client:load product={product} />
 				</div>
-
-				<div class="action-row">
-					<button class="button" type="button" data-add-to-cart>Añadir al carrito</button>
-					<a class="button-secondary" href="/productos">Volver al catálogo</a>
-				</div>
-
+				
 				<p class="product-feedback" data-feedback aria-live="polite"></p>
 
 				<div class="product-notes">
@@ -172,12 +163,6 @@ const defaultQuantity = 1;
 		flex-wrap: wrap;
 		gap: 12px;
 		padding-top: 6px;
-	}
-
-	.button:disabled {
-		opacity: 0.75;
-		cursor: not-allowed;
-		transform: none;
 	}
 
 	.product-notes {

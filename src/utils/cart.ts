@@ -21,7 +21,7 @@ export type CartTotals = {
 	count: number;
 };
 
-type CartInput = {
+export type CartInput = {
 	product: Product;
 	size: string;
 	color?: string;
