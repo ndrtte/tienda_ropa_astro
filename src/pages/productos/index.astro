@@ -3,6 +3,9 @@ import Layout from '../../layouts/Layout.astro';
 import ProductCard from '../../components/ProductCard.astro';
 import { getCategorySlug, products } from '../../data/products';
 
+export const ssr = true;
+export const prerender = false;
+
 const url = Astro.url;
 const categoryFilter = url.searchParams.get('categoria') ?? '';
 const searchQuery = url.searchParams.get('q')?.trim() ?? '';
@@ -10,9 +13,9 @@ const sortValue = url.searchParams.get('sort') ?? 'featured';
 
 const categoryOptions = [
 	{ label: 'All', slug: '' },
-	{ label: 'Men', slug: 'men' },
-	{ label: 'Women', slug: 'women' },
-	{ label: 'Accessories', slug: 'accessories' }
+	{ label: 'Men', slug: 'hombre' },
+	{ label: 'Women', slug: 'mujer' },
+	{ label: 'Accessories', slug: 'accesorios' }
 ];
 
 function buildHref(updates: Record<string, string | null | undefined>) {
