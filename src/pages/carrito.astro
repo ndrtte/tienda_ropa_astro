@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import "../styles/carrito-prod.css";
 ---
 
 <Layout
@@ -91,35 +92,6 @@ import Layout from '../layouts/Layout.astro';
 		padding-top: 8px;
 	}
 
-	.cart-item {
-		display: grid;
-		grid-template-columns: 140px minmax(0, 1fr);
-		gap: 18px;
-		padding: 16px;
-	}
-
-	.cart-image {
-		width: 100%;
-		height: 100%;
-		min-height: 170px;
-		object-fit: cover;
-		border-radius: calc(var(--radius) - 10px);
-		background: #e9e2d8;
-	}
-
-	.cart-details {
-		display: grid;
-		gap: 18px;
-		align-content: space-between;
-	}
-
-	.cart-meta {
-		display: flex;
-		align-items: flex-start;
-		justify-content: space-between;
-		gap: 18px;
-	}
-
 	.category {
 		margin: 0 0 6px;
 		font-size: 0.78rem;
@@ -148,44 +120,6 @@ import Layout from '../layouts/Layout.astro';
 		font-weight: 500;
 	}
 
-	.cart-actions {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		justify-content: space-between;
-		gap: 12px;
-	}
-
-	.quantity-control {
-		display: inline-flex;
-		align-items: center;
-		gap: 14px;
-		padding: 8px;
-		border: 1px solid var(--line);
-		border-radius: 999px;
-		background: rgba(255, 255, 255, 0.7);
-	}
-
-	.quantity-control button,
-	.remove-button {
-		border: 0;
-		background: transparent;
-		color: var(--text);
-		cursor: pointer;
-	}
-
-	.quantity-control button {
-		width: 32px;
-		height: 32px;
-		border-radius: 999px;
-		background: #fff;
-		border: 1px solid var(--line);
-	}
-
-	.remove-button {
-		color: var(--muted);
-		font-size: 0.95rem;
-	}
 
 	.summary {
 		position: sticky;
