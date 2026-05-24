@@ -342,10 +342,10 @@ export const products: Product[] = [
 		material: '100% poliéster técnico',
 		colors: ['Negro', 'Gris Oscuro', 'Azul Marino'],
 		sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-		image: 'https://images.unsplash.com/photo-1509942774463-acf339cf87d5?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://technostoff.com/cdn/shop/products/minimalistic_techno_premium_hoodie_fuer_maenner.jpg?v=1660668488&width=600',
 		images: [
-			'https://images.unsplash.com/photo-1509942774463-acf339cf87d5?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1556821840-3a63f15732ce?auto=format&fit=crop&w=1200&q=80'
+			'https://m.media-amazon.com/images/I/61zH82HIi1L._AC_UY1000_.jpg',
+			'https://exitocol.vtexassets.com/arquivos/ids/18275492/buso-hombre-azul-oscuro-hoodie.jpg?v=638191784548270000'
 		],
 		featured: false
 	},
@@ -414,10 +414,10 @@ export const products: Product[] = [
 		material: '100% poliéster satinado',
 		colors: ['Champán', 'Negro', 'Burdeos'],
 		sizes: ['S', 'M', 'L', 'XL'],
-		image: 'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://m.media-amazon.com/images/I/71R-OPczWxL._AC_UF894,1000_QL80_.jpg',
 		images: [
-			'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80'
+			'https://m.media-amazon.com/images/I/61Vpk1iu4zL._AC_UY1000_.jpg',
+			'https://m.media-amazon.com/images/I/61RQxfCKCVL._AC_UY1000_.jpg'
 		],
 		featured: false
 	},
@@ -432,10 +432,10 @@ export const products: Product[] = [
 		material: '63% poliéster, 33% viscosa, 4% elastano',
 		colors: ['Topo', 'Negro', 'Arena'],
 		sizes: ['XS', 'S', 'M', 'L', 'XL'],
-		image: 'https://images.unsplash.com/photo-1584370848010-d7fe6bc767ec?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://highstreet.com.mx/cdn/shop/files/HIGH-STREET-Pantalon-wide-leg-con-pinzas-frontales-tiro-alto-BPCA-250033_03_b65d2933-e6e3-484b-99b6-a1b7ee0377c1_720x.jpg?v=1769815029',
 		images: [
-			'https://images.unsplash.com/photo-1584370848010-d7fe6bc767ec?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1200&q=80'
+			'https://static.e-stradivarius.net/assets/public/f3b4/e903/0077469ba286/3e14e132db9a/01152563001-c1/01152563001-c1.jpg?ts=1773763174083&w=500',
+			'https://julio.com/media/catalog/product/1/5/pantalon-recto-fluido-tiro-alto-arena-con-pinzas-y-banda.jpg?quality=80&bg-color=255,255,255&height=638&width=508&canvas=508:638'
 		],
 		featured: false
 	},
@@ -449,10 +449,10 @@ export const products: Product[] = [
 		material: '55% lana, 45% poliéster',
 		colors: ['Multicolor Crema', 'Negro', 'Rosa Empolvado'],
 		sizes: ['XS', 'S', 'M', 'L'],
-		image: 'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://img01.ztat.net/article/spp-media-p1/e3844b86961848b98484747de960fc2d/cba3f3eb23a54236856092c305a766af.jpg?imwidth=762',
 		images: [
-			'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80'
+			'https://img01.ztat.net/article/spp-media-p1/3c6c12a72c214010b62c674b6fac7296/07ffb13d0ae1469aab3981757e54793a.jpg?imwidth=762',
+			'https://julio.com/media/catalog/product/4/4/440106_01_1.jpg?quality=80&bg-color=255,255,255&height=638&width=508&canvas=508:638'
 		],
 		featured: false
 	},
@@ -466,10 +466,10 @@ export const products: Product[] = [
 		material: '52% viscosa, 28% nylon, 20% algodón',
 		colors: ['Camel', 'Gris', 'Marfil'],
 		sizes: ['S', 'M', 'L', 'XL'],
-		image: 'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://m.media-amazon.com/images/I/718-T2i9duL._AC_UF894,1000_QL80_.jpg',
 		images: [
-			'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80'
+			'https://m.media-amazon.com/images/I/71WLmYKoBJL._AC_UY1000_.jpg',
+			'https://www.katia.com/files/mod/6300/patron-tejer-punto-ganchillo-mujer-chaqueta-primavera-verano-katia-6300-6-g.jpg'
 		],
 		featured: false
 	},
@@ -482,18 +482,18 @@ export const products: Product[] = [
 		description:
 			'Vestido midi de lino con escote en V, tirantes finos y falda ligeramente acampanada.',
 		material: '100% lino',
-		colors: ['Blanco Roto', 'Tierra', 'Azul Lavanda'],
+		colors: ['Azul Lavanda', 'Tierra', 'Blanco Roto'],
 		sizes: ['XS', 'S', 'M', 'L', 'XL'],
-		image: 'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://instagram.ftgu1-3.fna.fbcdn.net/v/t51.82787-15/623256209_18555957415000629_959544795657927652_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ig_cache_key=MzgyMDM1NDA3MjE1NDg1Njk1Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&_nc_aid=0&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=Gk-w8u-kt1wQ7kNvwFVvOJI&_nc_oc=AdrU443i7C__0hnqfBe6DFxLZAL39A4yhuAclOyuxB2Ex1jyaCrvOKFigB2UroOdx268PfdG3CfRiLytFGcgOycF&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.ftgu1-3.fna&_nc_gid=-UosjAWAsk4Kdg872MYOXQ&_nc_ss=7a22e&oh=00_Af6NTNjeySZ6KxM4FUW3Z304VbZblnd5qPn3foHXuvz39w&oe=6A1900AE',
 		images: [
-			'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80'
+			'https://www.mytheresa.com/image/1094/1238/100/cb/P00990424_b1.jpg',
+			'https://cdna.lystit.com/520/650/n/photos/massimodutti/69241d99/massimo-dutti-white-Vestido-Midi-Lino-Vuelo-Bordado.jpeg'
 		],
 		featured: false
 	},
 	{
-		id: 'top-corsé-bordado',
-		name: 'Top Corsé Bordado',
+		id: 'top-bordado',
+		name: 'Top Bordado',
 		price: 1625,
 		category: 'Mujer',
 		description:
@@ -501,10 +501,10 @@ export const products: Product[] = [
 		material: '100% algodón',
 		colors: ['Blanco', 'Negro', 'Rosa Floral'],
 		sizes: ['XS', 'S', 'M', 'L'],
-		image: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://m.media-amazon.com/images/I/81TaoBpMDuL._AC_UF894,1000_QL80_.jpg',
 		images: [
-			'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1584370848010-d7fe6bc767ec?auto=format&fit=crop&w=1200&q=80'
+			'https://i.etsystatic.com/8232387/r/il/61250b/3362379950/il_570xN.3362379950_ab8a.jpg',
+			'https://i.pinimg.com/1200x/e8/b9/41/e8b941ca2b7491a229a43612af78da4a.jpg'
 		],
 		featured: false
 	},
@@ -520,8 +520,8 @@ export const products: Product[] = [
 		sizes: ['XS', 'S', 'M', 'L', 'XL'],
 		image: 'https://images.unsplash.com/photo-1539533018447-63fcce2678e3?auto=format&fit=crop&w=1200&q=80',
 		images: [
-			'https://images.unsplash.com/photo-1539533018447-63fcce2678e3?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80'
+			'https://cdn.laredoute.com/cdn-cgi/image/width=650,height=650,fit=pad,dpr=1/products/5/2/3/5231c3bf2cd6ebfeb9533882819c4f5e.jpg',
+			'https://hips.hearstapps.com/hmg-prod/images/gettyimages-2175697092-6703e52103028.jpg?crop=0.657xw:1.00xh;0.143xw,0&resize=640:*'
 		],
 		featured: false
 	},
@@ -536,10 +536,10 @@ export const products: Product[] = [
 		material: '100% poliéster satinado',
 		colors: ['Champán', 'Negro', 'Azul Cobalto'],
 		sizes: ['XS', 'S', 'M', 'L', 'XL'],
-		image: 'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://m.media-amazon.com/images/I/71UCJD2PHXL.jpg',
 		images: [
-			'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=80'
+			'https://http2.mlstatic.com/D_NQ_NP_853270-CBT98394143351_112025-O-falda-tipo-b-para-mujer-lisa-plisada-de-saten-grande-ve.webp',
+			'https://m.media-amazon.com/images/I/71vA9lfjAtL.jpg'
 		],
 		featured: false
 	},
@@ -553,10 +553,10 @@ export const products: Product[] = [
 		material: '100% algodón popelín',
 		colors: ['Blanco', 'Azul Claro', 'Rosa Nude'],
 		sizes: ['XS', 'S', 'M', 'L', 'XL'],
-		image: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://tommy-europe.scene7.com/is/image/TommyEurope/DW0DW22936_YBL_main?$b2c_updp_m_mainImage_1920$',
 		images: [
-			'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80'
+			'https://tommy-europe.scene7.com/is/image/TommyEurope/DW0DW22936_C8P_main?wid=625&fmt=jpeg&qlt=95%2C1&op_sharpen=0&resMode=sharp2&op_usm=1.5%2C.5%2C0%2C0&iccEmbed=0&printRes=72',
+			'https://media.lolacasademunt.com/52719-large_default/camisa-popelin-oversize.jpg'
 		],
 		featured: false
 	},
@@ -570,10 +570,10 @@ export const products: Product[] = [
 		material: '78% poliamida, 22% elastano',
 		colors: ['Negro', 'Gris Oscuro', 'Azul Marino'],
 		sizes: ['XS', 'S', 'M', 'L', 'XL'],
-		image: 'https://images.unsplash.com/photo-1506629082955-511b1aa562c8?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://insideactive.pe/cdn/shop/files/samantha3301_5fb504b7-b503-4c64-8dec-621945298381.jpg?v=1723089831',
 		images: [
-			'https://images.unsplash.com/photo-1506629082955-511b1aa562c8?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1584370848010-d7fe6bc767ec?auto=format&fit=crop&w=1200&q=80'
+			'https://horizons-lointains.fr/cdn/shop/files/Legging-de-sport-gris-cotele-extra-stretch-et-confort-h028-7.jpg?v=1696955309&width=800',
+			'https://www.myprotein.es/images?url=https://static.thcdn.com/productimg/original/14742266-1555107703293377.jpg&format=webp&auto=avif'
 		],
 		featured: false
 	},
@@ -587,10 +587,10 @@ export const products: Product[] = [
 		material: '100% viscosa',
 		colors: ['Blanco Roto', 'Mostaza', 'Negro'],
 		sizes: ['XS', 'S', 'M', 'L', 'XL'],
-		image: 'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://www.apparentia.com/views/resources/img/productos/20006/l/vestido-camisero-midi-de-plumetti-y-crep-para-novia-civil.jpg',
 		images: [
-			'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80'
+			'https://img01.ztat.net/article/spp-media-p1/c65b9b6d4cb043ae90e7ab71d47a0729/d0f5fe2bc5f14b48b8e9d26f11659a45.jpg?imwidth=1800',
+			'https://asset.promod.com/product/167111-gz-1693562538.jpg?auto=webp&quality=80&crop=10:15'
 		],
 		featured: false
 	},
@@ -604,10 +604,10 @@ export const products: Product[] = [
 		material: '95% algodón, 5% elastano',
 		colors: ['Negro', 'Blanco', 'Sage'],
 		sizes: ['XS', 'S', 'M', 'L'],
-		image: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://romanfashion.com.mx/media/catalog/product/cache/9877ff78997438903db8832efc7695dc/0/1/0141-negro-1-tr_vbdcyznjvvpqwnn8.jpg',
 		images: [
-			'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80'
+			'https://hips.hearstapps.com/hmg-prod/images/chiara-ferragni-crop-top-canale-blanco-hm-8-1646906339.jpeg',
+			'https://bohopink.com/cdn/shop/products/img_proxy_0b317017-8960-44d7-bb62-1fd2a280d10c.jpg?v=1752699954'
 		],
 		featured: false
 	},
@@ -622,10 +622,10 @@ export const products: Product[] = [
 		material: '100% lino',
 		colors: ['Beige', 'Blanco', 'Verde Salvia'],
 		sizes: ['XS', 'S', 'M', 'L', 'XL'],
-		image: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://i.pinimg.com/736x/f5/c1/67/f5c167cb7a1cb9896f9f4f2abe641ccf.jpg',
 		images: [
-			'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80'
+			'https://fenzy.es/media/uploads/public/product/20638-white_.jpg',
+			'https://m.media-amazon.com/images/I/61leeVppqNL._AC_UY1000_.jpg'
 		],
 		featured: false
 	},
@@ -639,10 +639,10 @@ export const products: Product[] = [
 		material: '100% poliéster gasa',
 		colors: ['Rosa Palo', 'Azul Cielo', 'Negro'],
 		sizes: ['XS', 'S', 'M', 'L'],
-		image: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://cdn-6.stacees.co.uk/uploads/2022/06/24/2022062401062889204_S22076XYB.jpg',
 		images: [
-			'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80'
+			'https://invitadisima.com/141086-thickbox_default/vestido-de-fiesta-largo-azul-pastel-de-gasa-con-escote-asimetrico.jpg',
+			'https://i.etsystatic.com/9650245/r/il/32e970/4694314867/il_570xN.4694314867_b16e.jpg'
 		],
 		featured: false
 	},
@@ -656,10 +656,10 @@ export const products: Product[] = [
 		material: '100% poliéster con revestimiento PU',
 		colors: ['Verde Caqui', 'Negro', 'Camel'],
 		sizes: ['XS', 'S', 'M', 'L', 'XL'],
-		image: 'https://images.unsplash.com/photo-1539533018447-63fcce2678e3?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://cdn.yoursclothing.com/Images/ProductImages/Big/2ee53718-633a-40_120868_A.jpg',
 		images: [
-			'https://images.unsplash.com/photo-1539533018447-63fcce2678e3?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80'
+			'https://www.kiabi.es/images/parka-impermeable-negro-bxp55_1_hd4.jpg',
+			'https://img01.ztat.net/article/spp-media-p1/0fc9e2facdc74c28b0ceed901726bd86/d4df3c3390064bfcb05061206488fc57.jpg?imwidth=1800'
 		],
 		featured: false
 	},
@@ -673,10 +673,10 @@ export const products: Product[] = [
 		material: '80% poliamida, 20% elastano',
 		colors: ['Negro', 'Terracota', 'Verde Oscuro'],
 		sizes: ['XS', 'S', 'M', 'L', 'XL'],
-		image: 'https://images.unsplash.com/photo-1506629082955-511b1aa562c8?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://contents.mediadecathlon.com/p2731534/k$237a39e0e4626b12ed99691d7068a60f/short-de-ciclista-de-fitness-y-cardio-negro-de-tiro-alto-para-mujer.jpg?format=auto&quality=40&f=800x800',
 		images: [
-			'https://images.unsplash.com/photo-1506629082955-511b1aa562c8?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=80'
+			'https://safetti.com/cdn/shop/files/PANTALONETACICLISMO-DAMA_21673F_TERRACOTA_1.jpg?v=1724889420',
+			'https://img01.ztat.net/article/spp-media-p1/ec85467205f84115ba3944a78ca4867c/59e564aef62c4847adc8cba141aab352.jpg?imwidth=1800'
 		],
 		featured: false
 	},
@@ -706,12 +706,12 @@ export const products: Product[] = [
 		description:
 			'Sudadera cropped de rizo con cuello redondo, manga larga y acabado inferior elástico.',
 		material: '80% algodón, 20% poliéster',
-		colors: ['Blanco Roto', 'Gris Melange', 'Rosa Nude'],
+		colors: ['Gris Melange', 'Blanco Roto',  'Rosa Nude'],
 		sizes: ['XS', 'S', 'M', 'L'],
-		image: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://images.asos-media.com/products/sudadera-corta-gris-con-cuello-alto-y-diseno-universitario-de-tommy-jeans/207287418-1-greyhtr?$n_640w$&wid=513&fit=constrain',
 		images: [
-			'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=80'
+			'https://images.asos-media.com/products/sudadera-corta-blanca-con-capucha-y-diseno-universitario-de-corte-cuadrado-exclusiva-en-asos-de-vans/203855137-1-white?$n_640w$&wid=513&fit=constrain',
+			'https://www.terranovastyle.com/cdn/shop/files/7605f7d02e497edb491ce0d1fbb63cdecc11a1c7_STILLG_SAB0066922001_S119.jpg?v=1776146744&width=400'
 		],
 		featured: false
 	},
@@ -760,12 +760,12 @@ export const products: Product[] = [
 		description:
 			'Gorra de béisbol en algodón lavado con cierre trasero regulable y visera curvada.',
 		material: '100% algodón lavado',
-		colors: ['Negro', 'Crema', 'Azul Marino'],
+		colors: ['Crema', 'Negro', 'Azul Marino'],
 		sizes: ['Única'],
-		image: 'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://img01.ztat.net/article/spp-media-p1/db79dd9a82704da89dcf134e2a6450bf/335a91f41572462cba3f36fd8dc3ccac.jpg?imwidth=1800&filter=packshot',
 		images: [
-			'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1200&q=80'
+			'https://m.media-amazon.com/images/I/71Zi4o6MNdL._AC_UY1000_.jpg',
+			'https://static.caphunters.com/51065-large_default/gorra-plana-azul-marino-ajustada-59fifty-a-frame-championship-side-flag-de-atlanta-braves-mlb-de-new-era.webp'
 		],
 		featured: false
 	},
@@ -779,10 +779,10 @@ export const products: Product[] = [
 		material: 'Cuero genuino, hebilla de zinc',
 		colors: ['Marrón Tostado', 'Negro'],
 		sizes: ['S', 'M', 'L', 'XL'],
-		image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://m.media-amazon.com/images/I/81pMMjfjjcL._AC_UY1000_.jpg',
 		images: [
-			'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1200&q=80'
+			'https://m.media-amazon.com/images/I/61tw63Zyp5L._AC_UF894,1000_QL80_.jpg',
+			'https://classymencollection.com/cdn/shop/files/Classic-black-leather-belt.jpg?v=1692705436'
 		],
 		featured: false
 	},
@@ -797,10 +797,10 @@ export const products: Product[] = [
 		material: 'Cuero vegano texturizado',
 		colors: ['Camel', 'Negro', 'Rojo Cereza'],
 		sizes: ['Única'],
-		image: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxqZuXUyTVPGGAzykuvHk0eF7xgX8ZcOKDkg&s',
 		images: [
 			'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1200&q=80'
+			'https://http2.mlstatic.com/D_NQ_NP_856550-CBT110956323279_042026-O.webp'
 		],
 		featured: false
 	},
@@ -814,10 +814,10 @@ export const products: Product[] = [
 		material: '100% cachemira',
 		colors: ['Camel', 'Gris', 'Blanco Crudo'],
 		sizes: ['Única'],
-		image: 'https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://m.media-amazon.com/images/I/71h9U-VyxrL._AC_UF894,1000_QL80_.jpg',
 		images: [
-			'https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1200&q=80'
+			'https://m.media-amazon.com/images/I/71S3CYMd70L._AC_UF894,1000_QL80_.jpg',
+			'https://www.sunxzz.com/cdn/shop/products/07-cashmerescarf_0.jpg?v=1631934045'
 		],
 		featured: false
 	},
@@ -830,12 +830,12 @@ export const products: Product[] = [
 		description:
 			'Gafas de sol de acetato con lente polarizada, protección UV400 y montura estilo vintage.',
 		material: 'Acetato, lente de cristal polarizado',
-		colors: ['Carey', 'Negro', 'Verde Tortuga'],
+		colors: ['Carey', 'Negro', 'Blanco'],
 		sizes: ['Única'],
-		image: 'https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://static.e-stradivarius.net/assets/public/a677/8090/2c004066ad6b/845ecaad565c/00665603400-60-c/00665603400-60-c.jpg?ts=1740999075879&w=1082&f=auto',
 		images: [
 			'https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=1200&q=80'
+			'https://www.sinner.eu/media/catalog/product/cache/e43935565574748590bb5e7ff9cf43f4/s/i/sisu-887-30-10_20260417-1634.jpg'
 		],
 		featured: false
 	},
@@ -849,10 +849,10 @@ export const products: Product[] = [
 		material: 'Paja toquilla tejida a mano',
 		colors: ['Natural', 'Natural/Negro', 'Natural/Marino'],
 		sizes: ['Única'],
-		image: 'https://images.unsplash.com/photo-1529467765028-07218dcf31e5?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://www.panamajack.es/cdn/shop/files/SOMBRERO-PANAMA-NATURAL-F1_G_NF_001_2000x.jpg?v=1772551287',
 		images: [
-			'https://images.unsplash.com/photo-1529467765028-07218dcf31e5?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=1200&q=80'
+			'https://palmasshop.com/wp-content/uploads/2024/08/Donato-Negro-Cocodrilo-Natural-3_clipped_rev_1.png',
+			'https://m.media-amazon.com/images/I/61QW4VigyBL._AC_UY1000_.jpg'
 		],
 		featured: false
 	},
@@ -866,10 +866,10 @@ export const products: Product[] = [
 		material: 'Cuero genuino, suela de goma vulcanizada',
 		colors: ['Negro', 'Marrón Tostado'],
 		sizes: ['36', '37', '38', '39', '40', '41', '42', '43'],
-		image: 'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://www.lizantto.com/cdn/shop/files/Botachelseanegracueroliso_1_1800x1800.jpg?v=1740802421',
 		images: [
-			'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=80'
+			'https://static.wixstatic.com/media/f2136b_271b4dc2bc914dc1a5003522250ad656~mv2.jpg/v1/fill/w_560,h_440,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f2136b_271b4dc2bc914dc1a5003522250ad656~mv2.jpg',
+			'https://xcdn.next.co.uk/common/items/default/default/itemimages/3_4Ratio/product/lge/F11920s.jpg?im=Resize,width=750'
 		],
 		featured: false
 	},
@@ -884,10 +884,10 @@ export const products: Product[] = [
 		material: 'Cuero vegano, forro de poliéster',
 		colors: ['Negro', 'Topo', 'Coñac'],
 		sizes: ['Única'],
-		image: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://m.media-amazon.com/images/I/61uHHuVOJPL._AC_UF894,1000_QL80_.jpg',
 		images: [
-			'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1200&q=80'
+			'https://http2.mlstatic.com/D_NQ_NP_726681-MLA111090430463_042026-O.webp',
+			'https://m.media-amazon.com/images/I/91o-qGIFheL._AC_UY1000_.jpg'
 		],
 		featured: false
 	},
@@ -901,10 +901,10 @@ export const products: Product[] = [
 		material: '80% algodón peinado, 17% poliamida, 3% elastano',
 		colors: ['Blanco x3', 'Negro x3', 'Multicolor'],
 		sizes: ['36-39', '40-43', '44-46'],
-		image: 'https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://www.dim.es/cdn/shop/files/D07Y9M3-0HY_01_43370d0b-097d-4e1b-94ec-4464052510db.jpg?v=1779203702',
 		images: [
-			'https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1200&q=80'
+			'https://www.dim.es/cdn/shop/files/D05U8M3-0HZ_01_310f1aa5-3bea-4c1d-a4cf-d918d26fc516.jpg?v=1779203518',
+			'https://xcdn.next.co.uk/common/items/default/default/itemimages/3_4Ratio/product/lge/F43085s.jpg?im=Resize,width=750'
 		],
 		featured: false
 	},
@@ -916,12 +916,12 @@ export const products: Product[] = [
 		description:
 			'Reloj de cuarzo con esfera minimalista, correa de cuero intercambiable y cristal antirrayaduras.',
 		material: 'Caja de acero, correa de cuero genuino',
-		colors: ['Plata/Marrón', 'Dorado/Negro', 'Negro/Negro'],
+		colors: ['Plata', 'Dorado/Negro', 'Negro/Negro'],
 		sizes: ['Única'],
-		image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://m.media-amazon.com/images/I/81hNvRvRtGL._AC_SL1500_.jpg',
 		images: [
-			'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1200&q=80'
+			'https://unestiloperu.com/wp-content/uploads/reloj-qq-c214j102y-hombre-cuero-minimalista-negro.jpg',
+			'https://eu-images.contentstack.com/v3/assets/blt7dcd2cfbc90d45de/blted739dc621164af6/69426f7d58e5472ecaf50868/Moment-Black-tone-37260.jpg?format=pjpg&auto=webp&quality=75%2C90&width=3840'
 		],
 		featured: false
 	},
@@ -936,10 +936,10 @@ export const products: Product[] = [
 		material: 'Cuero genuino curtido al vegetal',
 		colors: ['Marrón Oscuro', 'Negro', 'Coñac'],
 		sizes: ['Única'],
-		image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://i.etsystatic.com/12235498/r/il/ad47cb/7877948475/il_570xN.7877948475_dr0d.jpg',
 		images: [
-			'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=80'
+			'https://m.media-amazon.com/images/I/618l-26Zy1L._AC_UY1000_.jpg',
+			'https://m.media-amazon.com/images/I/81utlBW2jGL._AC_UF894,1000_QL80_.jpg'
 		],
 		featured: false
 	},
@@ -953,10 +953,10 @@ export const products: Product[] = [
 		material: 'Cuero genuino, suela de goma',
 		colors: ['Tostado', 'Blanco', 'Negro'],
 		sizes: ['36', '37', '38', '39', '40', '41'],
-		image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://images.asos-media.com/products/sandalias-tostadas-minimalistas-con-diseno-de-correas-de-truffle-collection/205621974-1-tan?$n_640w$&wid=513&fit=constrain',
 		images: [
-			'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=1200&q=80'
+			'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeeyATr9A85XNDFEolr60jcvYaRmaa_KAohw&s',
+			'https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1748280099-sandalias-minimalistas-05-6834a1d0ca209.jpg?crop=1xw:1xh;center,top&resize=980:*'
 		],
 		featured: false
 	},
@@ -970,10 +970,10 @@ export const products: Product[] = [
 		material: 'Cuero vegano, interior de terciopelo',
 		colors: ['Negro', 'Burdeos', 'Nude'],
 		sizes: ['Única'],
-		image: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://http2.mlstatic.com/D_NQ_NP_604822-MLM108103760904_032026-O.webp',
 		images: [
-			'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1200&q=80'
+			'https://www.sacher1846.com/cdn/shop/files/77.301.010101i_1100x.jpg?v=1692172151',
+			'https://i5.walmartimages.com/asr/991cfbfa-1092-4e16-b755-b1112bd70b6c.851eee1b892e8630ef264f3d8f02a37c.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF'
 		],
 		featured: false
 	}
