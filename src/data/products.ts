@@ -221,10 +221,10 @@ export const products: Product[] = [
 		material: '95% poliamida, 5% elastano',
 		colors: ['Verde Militar', 'Negro', 'Topo'],
 		sizes: ['S', 'M', 'L', 'XL'],
-		image: 'https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://images.asos-media.com/products/pantalones-cargo-verde-claro-workwear-stay-loose-de-levis/206113729-1-lightgreen?$n_640w$&wid=513&fit=constrain',
 		images: [
-			'https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=1200&q=80'
+			'https://tascani.vtexassets.com/arquivos/ids/180864-800-auto?v=638824004568230000&width=800&height=auto&aspect=true',
+			'https://acdn-us.mitiendanube.com/stores/001/218/661/products/25425-37_-5_calidad-jpeg-70-7cccdc8dfdca2c7c9017086163138339-1024-1024.webp'
 		],
 		featured: false
 	},
@@ -238,10 +238,10 @@ export const products: Product[] = [
 		material: '50% algodón, 50% acrílico',
 		colors: ['Crema', 'Marino', 'Mostaza'],
 		sizes: ['S', 'M', 'L', 'XL'],
-		image: 'https://images.unsplash.com/photo-1548126032-079a0fb0099d?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://m.media-amazon.com/images/I/51KBI8PUftL._AC_UY1000_.jpg',
 		images: [
-			'https://images.unsplash.com/photo-1548126032-079a0fb0099d?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1516257984-b1b4d707412e?auto=format&fit=crop&w=1200&q=80'
+			'https://m.media-amazon.com/images/I/71X3k1Zb2fL._AC_UY1000_.jpg',
+			'https://m.media-amazon.com/images/I/61vgs7sOJvL._AC_UF894,1000_QL80_.jpg'
 		],
 		featured: false
 	},
@@ -255,10 +255,10 @@ export const products: Product[] = [
 		material: '100% lino lavado',
 		colors: ['Arena', 'Azul Cielo', 'Blanco'],
 		sizes: ['S', 'M', 'L', 'XL'],
-		image: 'https://images.unsplash.com/photo-1591195853828-11db59a44f43?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://renzo.com.co/wp-content/uploads/2024/03/240201002.jpg',
 		images: [
-			'https://images.unsplash.com/photo-1591195853828-11db59a44f43?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1565084888279-aca607ecce0c?auto=format&fit=crop&w=1200&q=80'
+			'https://i.ebayimg.com/images/g/H5UAAeSwutNpr43k/s-l1200.webp',
+			'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp0KntgIdHvWbsMqiFWwnLMns-eMabiFTLXQ&s'
 		],
 		featured: false
 	},
@@ -272,10 +272,10 @@ export const products: Product[] = [
 		material: '60% algodón, 40% lino',
 		colors: ['Beige', 'Gris Claro', 'Azul Oscuro'],
 		sizes: ['S', 'M', 'L', 'XL'],
-		image: 'https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://www.wessi.com/cdn/shop/files/astarsiz-tek-dugme-erkek-blazer-ceketb-709610.jpg?v=1723638509&width=1800',
 		images: [
-			'https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80'
+			'https://wholesale.wessi.com/cdn/shop/files/CK-5311-30-AI5.jpg?v=1743776436&width=1080',
+			'https://wholesale.wessi.com/cdn/shop/files/CK-5309-21-AI7.jpg?v=1759406133&width=1080'
 		],
 		featured: false
 	},
@@ -290,27 +290,27 @@ export const products: Product[] = [
 		material: '100% algodón',
 		colors: ['Azul/Blanco', 'Rojo/Blanco', 'Verde/Blanco'],
 		sizes: ['S', 'M', 'L', 'XL'],
-		image: 'https://images.unsplash.com/photo-1563630423918-b58f07336ac9?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://johnpaolo.com.co/wp-content/uploads/2026/04/010136MC.png.jpg',
 		images: [
-			'https://images.unsplash.com/photo-1563630423918-b58f07336ac9?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=1200&q=80'
+			'https://dioro.com.mx/cdn/shop/files/2308352-PMC-_3.jpg?v=1696623118&width=1200',
+			'https://i5.walmartimages.com/asr/503014e0-e0b4-4e31-bbfb-b1c720dd4fa5.57a5c87e254f7541ac41ccb45f8e56d2.jpeg?odnHeight=717&odnWidth=717&odnBg=FFFFFF'
 		],
 		featured: false
 	},
 	{
-		id: 'chubasquero-ligero',
-		name: 'Chubasquero Ligero',
+		id: 'capote-ligero',
+		name: 'Capote Ligero',
 		price: 2475,
 		category: 'Hombre',
 		description:
-			'Chubasquero empaquetable con costuras selladas y capucha ajustable para días lluviosos.',
+			'Capote empaquetable con costuras selladas y capucha ajustable para días lluviosos.',
 		material: '100% poliéster reciclado con tratamiento DWR',
-		colors: ['Amarillo Mostaza', 'Negro', 'Azul Marino'],
+		colors: ['Negro', 'Amarillo Mostaza', 'Azul Marino'],
 		sizes: ['S', 'M', 'L', 'XL'],
-		image: 'https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://m.media-amazon.com/images/I/61jE2TMaEWL._AC_UY1000_.jpg',
 		images: [
-			'https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=1200&q=80'
+			'https://m.media-amazon.com/images/I/71074uYawZL._AC_UY1000_.jpg',
+			'https://www.kmmotos.com/cdn/shop/files/KMS-MMCE2065_a6a9d877-4abc-487a-99ef-55a1858e6b80.png?v=1748398687&width=1946'
 		],
 		featured: false
 	},
@@ -324,10 +324,10 @@ export const products: Product[] = [
 		material: '98% algodón, 2% elastano',
 		colors: ['Kaki', 'Azul Marino', 'Crema'],
 		sizes: ['28', '30', '32', '34', '36'],
-		image: 'https://images.unsplash.com/photo-1475178626620-a4d074967452?auto=format&fit=crop&w=1200&q=80',
+		image: 'https://holstone.com.mx/cdn/shop/files/CHINOCAQUISLIM_2_2048x.png?v=1766010214',
 		images: [
-			'https://images.unsplash.com/photo-1475178626620-a4d074967452?auto=format&fit=crop&w=1200&q=80',
-			'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80'
+			'https://oggi.mx/cdn/shop/files/CHINOS-900-MOVIN-MARINO_VISTA2.jpg?v=1739977521',
+			'https://acdn-us.mitiendanube.com/stores/001/218/661/products/16091-08-611-0e24ae01fbd8476e6716715438534575-1024-1024.webp'
 		],
 		featured: false
 	},
