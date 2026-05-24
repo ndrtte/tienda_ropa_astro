@@ -12,6 +12,16 @@ function getCategorySlug(category) {
 	return category.toLowerCase();
 }
 
+function getInitialCategoryFilter() {
+	if (typeof window === 'undefined') {
+		return '';
+	}
+
+	const categoryParam = new URLSearchParams(window.location.search).get('categoria') ?? '';
+
+	return categoryOptions.some((category) => category.slug === categoryParam) ? categoryParam : '';
+}
+
 function getDisplayPrice(product) {
 	return product.discountPrice ?? product.price;
 }
@@ -25,7 +35,7 @@ function getDiscountPercent(product) {
 }
 
 function ProductCatalog({ products }) {
-	const [categoryFilter, setCategoryFilter] = useState('');
+	const [categoryFilter, setCategoryFilter] = useState(getInitialCategoryFilter);
 	const [searchQuery, setSearchQuery] = useState('');
 	const [sortValue, setSortValue] = useState('featured');
 
