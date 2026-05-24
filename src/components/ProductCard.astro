@@ -10,7 +10,14 @@ const displayPrice = product.discountPrice ?? product.price;
 const hasDiscount = Boolean(product.discountPrice);
 ---
 
-<article class="surface card-hover product-card">
+<article
+	class="surface card-hover product-card"
+	data-name={product.name.toLowerCase()}
+	data-description={product.description.toLowerCase()}
+	data-category={product.category.toLowerCase()}
+	data-price={displayPrice}
+	data-featured={String(Boolean(product.featured))}
+>
 	<a href={`/productos/${product.id}`} class="product-link">
 		<div class="image-wrap">
 			<img src={product.image} alt={product.name} loading="lazy" />

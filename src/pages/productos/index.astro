@@ -1,15 +1,11 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import ProductCard from '../../components/ProductCard.astro';
-import { getCategorySlug, products } from '../../data/products';
+import { products } from '../../data/products';
 
-export const ssr = true;
-export const prerender = false;
-
-const url = Astro.url;
-const categoryFilter = url.searchParams.get('categoria') ?? '';
-const searchQuery = url.searchParams.get('q')?.trim() ?? '';
-const sortValue = url.searchParams.get('sort') ?? 'featured';
+const categoryFilter = '';
+const searchQuery = '';
+const sortValue = 'featured';
 
 const categoryOptions = [
 	{ label: 'Todo', slug: '' },
@@ -18,51 +14,6 @@ const categoryOptions = [
 	{ label: 'Accesorios', slug: 'accesorios' }
 ];
 
-function buildHref(updates: Record<string, string | null | undefined>) {
-	const params = new URLSearchParams(url.searchParams);
-
-	for (const [key, value] of Object.entries(updates)) {
-		if (!value) {
-			params.delete(key);
-			continue;
-		}
-
-		params.set(key, value);
-	}
-
-	const query = params.toString();
-	return query ? `${url.pathname}?${query}` : url.pathname;
-}
-
-const filteredProducts = products.filter((product) => {
-	const matchesCategory = !categoryFilter || getCategorySlug(product.category) === categoryFilter;
-	const normalizedQuery = searchQuery.toLowerCase();
-
-	const matchesSearch =
-		!normalizedQuery ||
-		product.name.toLowerCase().includes(normalizedQuery) ||
-		product.description.toLowerCase().includes(normalizedQuery) ||
-		product.category.toLowerCase().includes(normalizedQuery);
-
-	return matchesCategory && matchesSearch;
-});
-
-const sortedProducts = [...filteredProducts].sort((left, right) => {
-	const leftPrice = left.discountPrice ?? left.price;
-	const rightPrice = right.discountPrice ?? right.price;
-
-	if (sortValue === 'price-asc') {
-		return leftPrice - rightPrice;
-	}
-
-	if (sortValue === 'price-desc') {
-		return rightPrice - leftPrice;
-	}
-
-	return Number(Boolean(right.featured)) - Number(Boolean(left.featured));
-});
-
-const hasResults = sortedProducts.length > 0;
 ---
 
 <Layout
@@ -113,7 +64,7 @@ const hasResults = sortedProducts.length > 0;
 							category.slug === categoryFilter && 'pill-active',
 							!category.slug && !categoryFilter && 'pill-active'
 						]}
-						href={category.slug ? buildHref({ categoria: category.slug }) : '/productos'}
+						href={category.slug ? `/productos?categoria=${category.slug}` : '/productos'}
 					>
 						{category.label}
 					</a>
@@ -121,39 +72,124 @@ const hasResults = sortedProducts.length > 0;
 			</div>
 
 			<div class="catalog-meta">
-				<p class="muted">
-					{hasResults
-						? `${sortedProducts.length} producto${sortedProducts.length === 1 ? '' : 's'} disponibles.`
-						: 'No hay productos que coincidan con sus filtros actuales.'}
-				</p>
-				{(categoryFilter || searchQuery || sortValue !== 'featured') && (
-					<a class="link-arrow" href="/productos">
-						Limpiar filtros
-						<span aria-hidden="true">→</span>
-					</a>
-				)}
+				<p class="muted">Todos los productos disponibles</p>
+				<a class="link-arrow clear-filters" href="/productos" hidden>
+					Limpiar filtros
+					<span aria-hidden="true">→</span>
+				</a>
 			</div>
 		</div>
 	</section>
 
 	<section class="section-tight">
 		<div class="container">
-			{hasResults ? (
-				<div class="grid grid-4">
-					{sortedProducts.map((product) => <ProductCard product={product} />)}
-				</div>
-			) : (
-				<div class="surface catalog-empty">
-					<h2 class="h3">Nothing matched your filters.</h2>
-					<p class="muted">
-						Try a different keyword or category to keep browsing the collection.
-					</p>
-					<a class="button" href="/productos">View all products</a>
-				</div>
-			)}
+			<div class="grid grid-4">
+				{products.map((product) => <ProductCard product={product} />)}
+			</div>
+
+			<div class="surface catalog-empty" hidden>
+				<h2 class="h3">No hay productos que coincidan con tus filtros.</h2>
+				<p class="muted">
+					Prueba una palabra clave o categoría diferente para continuar explorando.
+				</p>
+				<a class="button" href="/productos">Ver todos los productos</a>
+			</div>
 		</div>
 	</section>
 </Layout>
+
+<script type="module">
+	const params = new URLSearchParams(window.location.search);
+	const categoryFilter = (params.get('categoria') ?? '').toLowerCase();
+	const searchQuery = params.get('q')?.trim().toLowerCase() ?? '';
+	const sortValue = params.get('sort') ?? 'featured';
+
+	const searchInput = document.querySelector('input[name="q"]');
+	const sortSelect = document.querySelector('select[name="sort"]');
+	const categoryHiddenInput = document.querySelector('input[name="categoria"]');
+	const countText = document.querySelector('.catalog-meta .muted');
+	const clearFilters = document.querySelector('.clear-filters');
+	const categoryPills = document.querySelectorAll('.catalog-filters a.pill');
+	const productGrid = document.querySelector('.grid.grid-4');
+	const emptyState = document.querySelector('.catalog-empty');
+	const productCards = Array.from(productGrid.querySelectorAll('article.product-card'));
+
+	function isMatch(card) {
+		const name = card.dataset.name ?? '';
+		const description = card.dataset.description ?? '';
+		const category = card.dataset.category ?? '';
+		const query = searchQuery;
+		const matchesCategory = !categoryFilter || category === categoryFilter;
+		const matchesSearch =
+			!query ||
+			name.includes(query) ||
+			description.includes(query) ||
+			category.includes(query);
+
+		return matchesCategory && matchesSearch;
+	}
+
+	function sortCards(cards) {
+		return cards.slice().sort((left, right) => {
+			const leftPrice = Number(left.dataset.price ?? 0);
+			const rightPrice = Number(right.dataset.price ?? 0);
+
+			if (sortValue === 'price-asc') {
+				return leftPrice - rightPrice;
+			}
+
+			if (sortValue === 'price-desc') {
+				return rightPrice - leftPrice;
+			}
+
+			return Number(right.dataset.featured === 'true') - Number(left.dataset.featured === 'true');
+		});
+	}
+
+	function updateCategoryPills() {
+		categoryPills.forEach((pill) => {
+			const pillCategory = pill.getAttribute('href')?.split('categoria=')[1] ?? '';
+			pill.toggleAttribute('aria-current', pillCategory === categoryFilter);
+			pill.classList.toggle('pill-active', !pillCategory ? !categoryFilter : pillCategory === categoryFilter);
+		});
+	}
+
+	function updateMeta(count) {
+		if (countText) {
+			countText.textContent =
+				count > 0
+					? `${count} producto${count === 1 ? '' : 's'} disponibles.`
+					: 'No hay productos que coincidan con tus filtros actuales.';
+		}
+
+		if (clearFilters) {
+			clearFilters.hidden = !categoryFilter && !searchQuery && sortValue === 'featured';
+		}
+	}
+
+	if (searchInput) searchInput.value = params.get('q')?.trim() ?? '';
+	if (sortSelect) sortSelect.value = sortValue;
+	if (categoryHiddenInput) categoryHiddenInput.value = categoryFilter;
+
+	updateCategoryPills();
+
+	const visibleCards = productCards.filter((card) => isMatch(card));
+	productCards.forEach((card) => {
+		card.hidden = !visibleCards.includes(card);
+	});
+
+	if (visibleCards.length === 0) {
+		productGrid.hidden = true;
+		emptyState.hidden = false;
+	} else {
+		productGrid.hidden = false;
+		emptyState.hidden = true;
+		const sorted = sortCards(visibleCards);
+		sorted.forEach((card) => productGrid.appendChild(card));
+	}
+
+	updateMeta(visibleCards.length);
+</script>
 
 <style>
 	.catalog-hero {
