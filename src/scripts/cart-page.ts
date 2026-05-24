@@ -18,7 +18,7 @@ const COUNT_SELECTOR = '[data-cart-count-label]';
 const CLEAR_BUTTON_SELECTOR = '[data-clear-cart]';
 
 function formatCurrency(value: number) {
-	return `€${value.toFixed(0)}`;
+	return `L.${value.toFixed(0)}`;
 }
 
 function renderCartItem(item: CartItem) {

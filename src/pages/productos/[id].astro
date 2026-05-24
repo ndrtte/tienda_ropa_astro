@@ -27,7 +27,7 @@ const defaultQuantity = 1;
 		<div class="container detail-layout">
 			<div class="gallery surface">
 				<div class="gallery-main">
-					<img src={product.images[0]} alt={product.name} />
+					<img src={product.image} alt={product.name} />
 				</div>
 
 				<div class="gallery-thumbs">
@@ -45,8 +45,8 @@ const defaultQuantity = 1;
 				<div class="title-block">
 					<h1 class="h2">{product.name}</h1>
 					<div class="price-row">
-						<span class="price">€{displayPrice}</span>
-						{hasDiscount && <span class="old-price">€{product.price}</span>}
+						<span class="price">L.{displayPrice}</span>
+						{hasDiscount && <span class="old-price">L.{product.price}</span>}
 					</div>
 				</div>
 
