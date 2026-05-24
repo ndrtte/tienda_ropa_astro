@@ -12,10 +12,10 @@ const searchQuery = url.searchParams.get('q')?.trim() ?? '';
 const sortValue = url.searchParams.get('sort') ?? 'featured';
 
 const categoryOptions = [
-	{ label: 'All', slug: '' },
-	{ label: 'Men', slug: 'hombre' },
-	{ label: 'Women', slug: 'mujer' },
-	{ label: 'Accessories', slug: 'accesorios' }
+	{ label: 'Todo', slug: '' },
+	{ label: 'Hombre', slug: 'hombre' },
+	{ label: 'Mujer', slug: 'mujer' },
+	{ label: 'Accesorios', slug: 'accesorios' }
 ];
 
 function buildHref(updates: Record<string, string | null | undefined>) {
@@ -71,38 +71,38 @@ const hasResults = sortedProducts.length > 0;
 >
 	<section class="section">
 		<div class="container catalog-hero stack">
-			<p class="kicker">Catalog</p>
+			<p class="kicker">Catálogo</p>
 			<div class="catalog-heading">
-				<h1 class="h2">Discover the full collection.</h1>
+				<h1 class="h2">Descubre la colección completa.</h1>
 				<p class="lead">
-					Minimal silhouettes, essential layers, and refined accessories for a modern wardrobe.
+					Siluetas minimalistas, capas esenciales y accesorios refinados para un closet moderno.
 				</p>
 			</div>
 
 			<form class="catalog-toolbar surface-soft" method="get">
 				<label class="search-field">
-					<span class="toolbar-label">Search</span>
+					<span class="toolbar-label">Buscar</span>
 					<input
 						class="field"
 						type="search"
 						name="q"
 						value={searchQuery}
-						placeholder="Search products"
+						placeholder="Buscar productos"
 					/>
 				</label>
 
 				<label class="search-field">
-					<span class="toolbar-label">Sort by</span>
+					<span class="toolbar-label">Ordenar por</span>
 					<select class="select" name="sort">
-						<option value="featured" selected={sortValue === 'featured'}>Featured</option>
-						<option value="price-asc" selected={sortValue === 'price-asc'}>Price: low to high</option>
-						<option value="price-desc" selected={sortValue === 'price-desc'}>Price: high to low</option>
+						<option value="featured" selected={sortValue === 'featured'}>Destacado</option>
+						<option value="price-asc" selected={sortValue === 'price-asc'}>Precio: de menor a mayor</option>
+						<option value="price-desc" selected={sortValue === 'price-desc'}>Precio: de mayor a menor</option>
 					</select>
 				</label>
 
 				<input type="hidden" name="categoria" value={categoryFilter} />
-				<button class="button" type="submit">Apply</button>
-				<a class="button-secondary" href="/productos">Reset</a>
+				<button class="button" type="submit">Aplicar</button>
+				<a class="button-secondary" href="/productos">Reiniciar</a>
 			</form>
 
 			<div class="catalog-filters" aria-label="Product categories">
@@ -123,7 +123,7 @@ const hasResults = sortedProducts.length > 0;
 			<div class="catalog-meta">
 				<p class="muted">
 					{hasResults
-						? `${sortedProducts.length} product${sortedProducts.length === 1 ? '' : 's'} available`
+						? `${sortedProducts.length} productos${sortedProducts.length === 1 ? '' : 's'} disponibles.`
 						: 'No products match your current filters.'}
 				</p>
 				{(categoryFilter || searchQuery || sortValue !== 'featured') && (
